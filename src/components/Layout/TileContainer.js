@@ -9,6 +9,7 @@ const TileContainer = props => {
         <Tile 
           key={q_obj.value}
           qText={q_obj.text}
+          category={props.category}
         >{q_obj.value}</Tile>
       ))}
     </div>
