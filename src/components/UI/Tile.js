@@ -13,7 +13,7 @@ const Tile = props => {
       ctx.setShowModal(true);
       ctx.setModalText(
         {
-          header: `${props.children}`,
+          title: `${props.category} - ${props.children}`,
           body: props.qText
         }
       );
@@ -26,7 +26,7 @@ const Tile = props => {
       className={styles.button}
       onClick={tileClickHandler}
     >
-      { visible && props.children}
+      { visible && `${props.children}`}
     </button>
   );
 };
