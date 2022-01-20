@@ -1,0 +1,9 @@
+.button {
+  background-color: #060CE9;
+  color: yellow;
+  height: 8.5rem;
+  font-weight: bold;
+  font-size: 2rem;
+  border: 3px solid black;
+  width: 100%;
+}
