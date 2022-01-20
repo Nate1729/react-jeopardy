@@ -63,7 +63,7 @@ const questions = [
       },
       {
         value: 400,
-        text: "Empero,r of Persia after Cyrus the Great, took the throne by force",
+        text: "Emperor of Persia after Cyrus the Great, took the throne by force",
         visible: true
       },
       {
