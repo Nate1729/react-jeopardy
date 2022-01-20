@@ -68,7 +68,7 @@ const questions = [
       },
       {
         value: 500,
-        text: "The first king of Summer, an Akkandian",
+        text: "The first king of Sumer, an Akkadian",
         visible: true
       }
     ]
@@ -98,7 +98,7 @@ const questions = [
       },
       {
         value: 500,
-        text: "Leaders in the Kingdom of Isreal before the kings",
+        text: "Leaders in the Kingdom of Israel before the kings",
         visible: true
       }
     ]
@@ -108,7 +108,7 @@ const questions = [
     questions: [
       {
         value: 100,
-        text: "Egyptaian kings",
+        text: "Egyptian kings",
         sisible: true
       },
       {
@@ -173,12 +173,12 @@ const questions = [
       },
       {
         value: 200,
-        text: "Who is Hermes's mother",
+        text: "Who is Hermes's mother?",
         visible: true
       },
       {
         value: 300,
-        text: "Who was the 16th president of the United States",
+        text: "Who was the 16th president of the United States?",
         visible: true
       },
       {
