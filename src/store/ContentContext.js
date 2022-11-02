@@ -4,7 +4,8 @@ const ContentContext = React.createContext(
   {
     showModal: false,
     modalHeader: "Hi",
-    modalBody: "Apple"
+    modalBody: "Apple",
+    modalImage: <div />
   });
 
 export default ContentContext;

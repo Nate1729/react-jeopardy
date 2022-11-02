@@ -11,7 +11,7 @@ const QCard = props => {
           <h2>{props.title}</h2>
         </header>
         <div className={styles.content}>
-          <p>{props.question}</p>
+          <p classname={styles.paragraph}>{props.children}</p>
         </div>
       </Card>
     </>
