@@ -1,0 +1,15 @@
+.column-container {
+  display: flex;
+  flex: 1 1 0px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 5px;
+}
+
+.row-container {
+  display: flex;
+  flex: 1 1 0px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 5px;
+}
