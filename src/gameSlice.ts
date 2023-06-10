@@ -32,7 +32,7 @@ const INFLUENTIAL_PEOPLE: Category = {
     "I am the \"Great Compromiser.\" My greatest accomplishments include the Compromises of 1820 and 1850.",
     "I was the first Supreme Court judge, deciding cases like Marbury v. Madison.",
     "My reinforcements drove the British out of Boston on March 17th 1776.",
-    "I wrote Uncle tom's Cabin, which described the tragic life of slaves and caused many Northerners to question the morality of slavery.",
+    "I wrote Uncle Tom's Cabin, which described the tragic life of slaves and caused many Northerners to question the morality of slavery.",
     "I am the monopoly man, funding big businesses and financial investments for my own profit.",
   ],
 }
@@ -65,7 +65,7 @@ const RANDOM_KNOWLEDGE: Category = {
     "There is a myth that I saved George Washington's portrait from the burning White House (it was really my slave who saved it)",
     "John Adams developed this disease from hyper stress and poor diet.",
     "Why should you not call chocolate sprinkles \"Jimmies?\"",
-    "Abraham Lincoln and this guy were plitical enemies, but things got personal when Lincoln stole his girl.",
+    "Abraham Lincoln and this guy were political enemies, but things got personal when Lincoln stole his girl.",
     "What do the stripes on the United States flag symbolized?",
   ],
 };
