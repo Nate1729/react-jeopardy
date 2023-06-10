@@ -7,11 +7,17 @@ import { ReactNode } from 'react';
  */
 export interface Category {
   title: string;
-  questions: [ReactNode, ReactNode, ReactNode, ReactNode, ReactNode];
+  questions: Question[];
+}
+
+export interface Question {
+  question: string | ReactNode;
+  asked: boolean;
 }
 
 
 export interface Game {
   title?: string;
-  categories: [Category, Category, Category, Category, Category, Category];
+  categories: { [key: string]: Category};
+  categoryKeyOrder: string[];
 }

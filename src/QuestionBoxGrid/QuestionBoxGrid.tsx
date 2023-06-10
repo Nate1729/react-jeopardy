@@ -10,11 +10,11 @@ import { RootState } from '../store/store';
  * on the game object that gets passed in via props
  */
 export const QuestionBoxGrid = () => {
-  const categories = useAppSelector((state: RootState) => state.game.game.categories);
+  const categoryTitles = useAppSelector((state: RootState) => state.game.game.categoryKeyOrder);
 
   return (
     <Container direction='row'>
-      {categories.map((_, i) => <CategoryColumn categoryIndex={i} key={i} />)}
+      {categoryTitles.map((title, key) => <CategoryColumn categoryTitle={title} key={key} />)}
     </Container>
   );
 };

@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 
 import { useAppDispatch, useAppSelector } from '../hook';
 import { RootState } from '../store/store';
-import { updateModalContent, closeQuestion } from '../gameSlice';
+import { askQuestion } from '../gameSlice';
 
 // Components
 import { Container } from '../UI';
@@ -10,46 +10,41 @@ import { Container } from '../UI';
 import style from './questions.module.css';
 
 interface OwnProps {
-  categoryIndex: number;
+  categoryTitle: string;
 }
 
 interface QuestionBoxProps {
-  categoryIndex: number;
-  questionIndex: number;
+  categoryTitle: string;
+  qIndex: number;
 }
-const QuestionBox = ({ categoryIndex, questionIndex }: QuestionBoxProps) => {
-  const question = useAppSelector((state: RootState) => state.game.game.categories[categoryIndex].questions[questionIndex]);
+const QuestionBox = ({ categoryTitle, qIndex }: QuestionBoxProps) => {
+  const question = useAppSelector((state: RootState) => state.game.game.categories[categoryTitle].questions[qIndex]);
   const multiplier = useAppSelector((state: RootState) => state.game.multiplier);
 
   const dispatch = useAppDispatch();
   
   const amount = useMemo(() => {
-    return question === undefined ? "" : `$${(questionIndex + 1) * multiplier}`
-  }, [question, questionIndex, multiplier]);
-  
-  console.log({amount});
+    return question.asked ? "" : `$${(qIndex + 1) * multiplier}`;
+  }, [question, multiplier]);
+  console.log({amount}); 
   const onClickHandler = () => {
-    if (question === "") {
-      return;
+    if (!question.asked) {
+      dispatch(askQuestion({categoryTitle, questionIndex: qIndex}));
     }
-
-    dispatch(updateModalContent(question));
-    dispatch(closeQuestion({categoryIndex, questionIndex}));
-
   }
   return <div className={style['question-box']} onClick={onClickHandler}>{amount}</div>
 };
 
 
-export const CategoryColumn = ({ categoryIndex }: OwnProps) => {
-  const category = useAppSelector((state: RootState) => state.game.game.categories[categoryIndex]);
+export const CategoryColumn = ({ categoryTitle }: OwnProps) => {
+  const category = useAppSelector((state: RootState) => state.game.game.categories[categoryTitle]);
 
   const renderQuestionBoxes = () => {
     return category.questions.map((_, i) => (
       <QuestionBox
-        categoryIndex={categoryIndex}
-        questionIndex={i}
+        categoryTitle={categoryTitle}
         key={i}
+        qIndex={i}
       />
     ))
   };
