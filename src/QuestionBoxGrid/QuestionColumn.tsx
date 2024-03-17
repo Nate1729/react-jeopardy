@@ -22,17 +22,17 @@ const QuestionBox = ({ categoryTitle, qIndex }: QuestionBoxProps) => {
   const multiplier = useAppSelector((state: RootState) => state.game.multiplier);
 
   const dispatch = useAppDispatch();
-  
+
   const amount = useMemo(() => {
     return question.asked ? "" : `$${(qIndex + 1) * multiplier}`;
   }, [question, multiplier]);
-  console.log({amount}); 
   const onClickHandler = () => {
     if (!question.asked) {
-      dispatch(askQuestion({categoryTitle, questionIndex: qIndex}));
+      dispatch(askQuestion({ categoryTitle, questionIndex: qIndex }));
     }
   }
-  return <div className={style['question-box']} onClick={onClickHandler}>{amount}</div>
+  const style_key = `question-box-color-${qIndex + 1}`;
+  return <div className={`${style['question-box']} ${style[style_key]}`} onClick={onClickHandler}>{amount}</div>
 };
 
 
