@@ -1,7 +1,7 @@
 .question-box {
   background: #060ce9;
   font-size: 40px;
-  color: #FFDD05;
+  /*color: #FFDD05; */
   font-weight: 900;
   padding: 1rem;
   flex-basis: 100%;
@@ -13,6 +13,25 @@
   text-align: center;
 }
 
+.question-box-color-1 {
+  color: #f294a3;
+}
+
+.question-box-color-2 {
+  color: #eaab4a;
+}
+
+.question-box-color-3 {
+  color: #f8d857;
+}
+
+.question-box-color-4 {
+  color: #82d461;
+}
+
+.question-box-color-5 {
+  color: #c859e7;
+}
 
 .title-box {
   background: #060ce9;
