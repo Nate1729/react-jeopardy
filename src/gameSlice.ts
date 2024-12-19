@@ -4,7 +4,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import { Game } from './models';
 
-import { GAME } from './data/AncientCivilizations';
+import { GAME } from './data/Grade7Trimester1Review';
 
 interface GameState {
   game: Game;
